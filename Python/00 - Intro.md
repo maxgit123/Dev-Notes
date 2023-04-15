@@ -61,8 +61,8 @@ too long'''
 A boolean data type is either a True or False value. T and F should be always uppercase.
 
 ``` Python
-True
-False
+print(True)
+print(False)
 ```
 
 #### List
