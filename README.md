@@ -1,2 +1,2 @@
-# Dev-Notes
+# Notes
 Notes about different technology
