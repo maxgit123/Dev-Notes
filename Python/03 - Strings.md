@@ -121,3 +121,62 @@ print(e) # o
 print(f) # n
 ```
 
+#### Accessing Characters in Strings by Index
+
+``` Python
+language = 'Python'
+first_letter = language[0]
+print(first_letter) # P
+last_index = len(language) - 1
+last_letter = language[last_index]
+print(last_letter) # n
+```
+
+If we want to start from right end we can use negative indexing. -1 is the last index
+
+``` Python
+language = 'Python'
+last_letter = language[-1]
+print(last_letter) # n
+second_last = language[-2]
+print(second_last) # o
+```
+
+#### Slicing Python Strings
+
+In python we can slice strings into substrings
+
+``` Python
+language = 'Python'
+first_three = language[0:3] # starts at zero index and up to 3 but not include 3
+print(first_three) #Pyt
+last_three = language[3:6]
+print(last_three) # hon
+# Another way
+last_three = language[-3:]
+print(last_three)   # hon
+last_three = language[3:]
+print(last_three)   # hon
+```
+
+#### Skipping Characters While Slicing
+
+It is possible to skip characters while slicing by passing step argument to slice method.
+
+``` Python
+language = 'Python'
+pto = language[0:6:2] #
+print(pto) # Pto
+```
+
+#### Reversing a String
+
+We can easily reverse strings in python
+
+``` Python
+greeting = 'Hello, World!'
+print(greeting[::-1]) # !dlroW ,olleH
+```
+
+### String Methods
+
