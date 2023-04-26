@@ -1,4 +1,4 @@
-[[00 - Intro]]
+[[Dev-Notes/Python/00 - Intro]]
 [[01 - Variables, Built-in Functions]]
 [[02 - Operators]]
 
