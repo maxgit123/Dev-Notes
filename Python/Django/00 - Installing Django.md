@@ -1,12 +1,14 @@
+<!-- title: Your Title -->
+
 # Virtual Environment, install Django and Create a project
 
-- [Creating Virtual Environment](#Creating%20Virtual%20Environment)
-- [Install Django](#Install%20Django)
-- [Creating a project](#Creating%20a%20project)
-- [The development server](#the%20development%20server)
-- [The development server](#The%20development%20server)
-	- [Automatic reloading of runserver](#Automatic%20reloading%20of%20runserver)
-	- [Changing the port](#Changing%20the%20port)
+- [Virtual Environment, install Django and Create a project](#virtual-environment-install-django-and-create-a-project)
+  - [Creating Virtual Environment](#creating-virtual-environment)
+  - [Install Django](#install-django)
+  - [Creating a project](#creating-a-project)
+  - [The development server](#the-development-server)
+    - [Automatic reloading of runserver](#automatic-reloading-ofrunserver)
+    - [Changing the port](#changing-the-port)
 
 ## Creating Virtual Environment
 
@@ -19,7 +21,7 @@ py -m venv <name-env>
 Activate the virtual environment
 
 ``` sh
-<name-env>\Scripts\activate.bat
+<name-env>\Scripts\activate
 
 or
 
@@ -60,12 +62,12 @@ django-admin startproject 'mysite'
 python manage.py runserver
 ```
 
-> [!note] 
-> You’ll need to avoid naming projects after built-in Python or Django components. In particular, this means you should avoid using names like `django` (which will conflict with Django itself) or `test` (which conflicts with a built-in Python package) 
+> [!note]
+> You’ll need to avoid naming projects after built-in Python or Django components. In particular, this means you should avoid using names like `django` (which will conflict with Django itself) or `test` (which conflicts with a built-in Python package)
 
 Let’s look at what [`startproject`](https://docs.djangoproject.com/en/4.2/ref/django-admin/#django-admin-startproject) created
 
-``` 
+```
 mysite/
     manage.py
     mysite/
@@ -81,8 +83,8 @@ These files are:
 - The outer **mysite/** root directory is a container for your project. Its name doesn’t matter to Django; you can rename it to anything you like.
 - **manage.py**: A command-line utility that lets you interact with this Django project in various ways. You can read all the details about *manage.py* in [django-admin and manage.py](https://docs.djangoproject.com/en/4.2/ref/django-admin/).
 - The inner **mysite/** directory is the actual Python package for your project. Its name is the Python package name you’ll need to use to import anything inside it (e.g. *mysite.urls*).
-- **__init__.py:** An empty file that tells Python that this directory should be considered a Python package. If you’re a Python beginner, read [more about packages](https://docs.python.org/3/tutorial/modules.html#tut-packages "(in Python v3.11)") in the official Python docs.
--  **settings.py**: Settings/configuration for this Django project. [Django settings](https://docs.djangoproject.com/en/4.2/topics/settings/) will tell you all about how settings work.
+- **\_\_init\_\_.py:** An empty file that tells Python that this directory should be considered a Python package. If you’re a Python beginner, read [more about packages](https://docs.python.org/3/tutorial/modules.html#tut-packages "(in Python v3.11)") in the official Python docs.
+- **settings.py**: Settings/configuration for this Django project. [Django settings](https://docs.djangoproject.com/en/4.2/topics/settings/) will tell you all about how settings work.
 - **urls.py**: The URL declarations for this Django project; a “table of contents” of your Django-powered site. You can read more about URLs in [URL dispatcher](https://docs.djangoproject.com/en/4.2/topics/http/urls/).
 - **asgi.py**: An entry-point for ASGI-compatible web servers to serve your project. See [How to deploy with ASGI](https://docs.djangoproject.com/en/4.2/howto/deployment/asgi/) for more details.
 - **wsgi.py**: An entry-point for WSGI-compatible web servers to serve your project. See [How to deploy with WSGI](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/) for more details.
@@ -95,12 +97,12 @@ To verify your Django project works, change into the outer `mysite` directory 
 py manage.py runserver
 ```
 
-> [!note] 
+> [!note]
 > Ignore the warning about unapplied database migrations for now; we’ll deal with the database shortly
 
 Django development server is a lightweight web server written purely in Python for develop things rapidly, without having to deal with configuring a production server – such as Apache – until you’re ready for production.
 
-> [!caution] 
+> [!caution]
 > **Don’t** use this server in anything resembling a production environment. It’s intended only for use while developing. (We’re in the business of making web frameworks, not web servers.)
 
 ### Automatic reloading of runserver
@@ -123,4 +125,3 @@ If you want to change the server’s IP, pass it along with the port
 ``` sh
 py manage.py runserver 0.0.0.0:8000
 ```
-
